@@ -16,6 +16,5 @@ object Supplier {
         Hobby("Reading"),
         Hobby("Swimming"),
         Hobby("Coding"),
-        Hobby("Gaming")
     )
 }
