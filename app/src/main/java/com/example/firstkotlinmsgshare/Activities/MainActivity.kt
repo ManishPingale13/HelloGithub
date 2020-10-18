@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.firstkotlinmsgshare.R
+import com.example.firstkotlinmsgshare.ShowToast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -17,6 +18,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SecondActivity::class.java)
             intent.putExtra("name",mname)
             startActivity(intent)
+            ShowToast("This is Toast msg")
         }
 
         share.setOnClickListener {
