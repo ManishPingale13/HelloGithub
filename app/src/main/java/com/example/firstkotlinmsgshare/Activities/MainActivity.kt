@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SecondActivity::class.java)
             intent.putExtra("name",mname)
             startActivity(intent)
-            ShowToast("This is Toast msg")
+            ShowToast("This is a Toast msg")
         }
 
         share.setOnClickListener {
