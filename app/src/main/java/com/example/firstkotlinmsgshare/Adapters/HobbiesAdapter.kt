@@ -1,4 +1,4 @@
-package com.example.firstkotlinmsgshare
+package com.example.firstkotlinmsgshare.Adapters
 
 import android.content.Context
 import android.content.Intent
@@ -6,22 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.firstkotlinmsgshare.Models.Hobby
+import com.example.firstkotlinmsgshare.R
 import kotlinx.android.synthetic.main.list_item.view.*
 
-class HobbiesAdapter(val context: Context, val hobbies: List<Hobby>) :
+class HobbiesAdapter(val context: Context, private val hobbies: List<Hobby>) :
     RecyclerView.Adapter<HobbiesAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview) {
-
-        var currenthobby:Hobby? = null
+        var currenthobby: Hobby? = null
         var ccurrentposition:Int = 0
+
         init {
             itemview.setOnClickListener{
                 Toast.makeText(context,currenthobby!!.title + "Clicked !",Toast.LENGTH_SHORT).show()
             }
-
             itemview.imgShare.setOnClickListener{
                 val intent = Intent()
                 intent.action = Intent.ACTION_SEND
@@ -31,6 +31,7 @@ class HobbiesAdapter(val context: Context, val hobbies: List<Hobby>) :
                 context.startActivity(Intent.createChooser(intent,"Share to:"))
             }
         }
+
         fun setdata(hobby: Hobby?, pos: Int) {
             itemView.txvTitle.text = hobby!!.title
             this.currenthobby = hobby

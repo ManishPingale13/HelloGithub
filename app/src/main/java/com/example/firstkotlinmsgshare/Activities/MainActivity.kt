@@ -1,11 +1,9 @@
-package com.example.firstkotlinmsgshare
+package com.example.firstkotlinmsgshare.Activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.isVisible
+import com.example.firstkotlinmsgshare.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,8 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             mname = edittext.text.toString()
-
-            val intent = Intent(this,SecondActivity::class.java)
+            val intent = Intent(this, SecondActivity::class.java)
             intent.putExtra("name",mname)
             startActivity(intent)
         }
@@ -33,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnrecycler.setOnClickListener {
-            val intent = Intent(this,Hobbies::class.java)
+            val intent = Intent(this, Hobbies::class.java)
             startActivity(intent)
         }
     }

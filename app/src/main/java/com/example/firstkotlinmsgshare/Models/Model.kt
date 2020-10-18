@@ -1,4 +1,4 @@
-package com.example.firstkotlinmsgshare
+package com.example.firstkotlinmsgshare.Models
 
 data class Hobby(var title: String)
 
@@ -9,7 +9,7 @@ object Supplier {
         Hobby("Swimming"),
         Hobby("Coding"),
         Hobby("Gaming"),
-        Hobby("Reading"), 
+        Hobby("Reading"),
         Hobby("Swimming"),
         Hobby("Coding"),
         Hobby("Gaming"),
