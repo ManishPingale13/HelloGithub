@@ -34,7 +34,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:src="@android:drawable/ic_menu_share"
-            card_view:tint="#000000" />
+            card_view:tint="#eeeeee" />
 
     </LinearLayout>
 

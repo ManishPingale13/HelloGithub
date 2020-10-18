@@ -9,7 +9,7 @@ object Supplier {
         Hobby("Swimming"),
         Hobby("Coding"),
         Hobby("Gaming"),
-        Hobby("Reading"),
+        Hobby("Reading"), 
         Hobby("Swimming"),
         Hobby("Coding"),
         Hobby("Gaming"),
