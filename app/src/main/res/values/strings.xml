@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Message share</string>
+    <string name="hello">Hello</string>
+    <string name="title_itemlist">Title</string>
+    <string name="con_des">share hobby</string>
+    <string name="go">Go</string>
+    <string name="share">Share</string>
+    <string name="enter_your_name">Enter Your Name</string>
+    <string name="let_s_go">Let\'s Go!</string>
+
 </resources>

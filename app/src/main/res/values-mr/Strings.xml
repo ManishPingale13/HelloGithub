@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">संदेश सामायिक करा</string>
+    <string name="hello">नमस्कार</string>
+    <string name="title_itemlist">शीर्षक</string>
+    <string name="con_des">सामायिक छंद</string>
+    <string name="go">जा</string>
+    <string name="share">सामायिक करा</string>
+    <string name="enter_your_name">आपले नांव लिहा</string>
+    <string name="let_s_go">चल जाऊया!</string>
+</resources>

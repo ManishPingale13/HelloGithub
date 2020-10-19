@@ -5,37 +5,42 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.firstkotlinmsgshare.Models.Hobby
 import com.example.firstkotlinmsgshare.R
+import com.example.firstkotlinmsgshare.Utils.ShowToast
 import kotlinx.android.synthetic.main.list_item.view.*
 
 class HobbiesAdapter(val context: Context, private val hobbies: List<Hobby>) :
     RecyclerView.Adapter<HobbiesAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview) {
-        var currenthobby: Hobby? = null
-        var ccurrentposition:Int = 0
+        private var currenthobby: Hobby? = null
+        private var ccurrentposition = 0
 
         init {
-            itemview.setOnClickListener{
-                Toast.makeText(context,currenthobby!!.title + "Clicked !",Toast.LENGTH_SHORT).show()
+            itemview.setOnClickListener {
+                currenthobby?.let {
+                    context.ShowToast(currenthobby!!.title + "Clicked !")
+                }
             }
-            itemview.imgShare.setOnClickListener{
-                val intent = Intent()
-                intent.action = Intent.ACTION_SEND
-                intent.putExtra(Intent.EXTRA_TEXT,"My Hooby is "+this.currenthobby!!.title)
-                intent.type = "text/plain"
-
-                context.startActivity(Intent.createChooser(intent,"Share to:"))
+            itemview.imgShare.setOnClickListener {
+                currenthobby?.let {
+                    val intent = Intent()
+                    intent.action = Intent.ACTION_SEND
+                    intent.putExtra(Intent.EXTRA_TEXT, "My Hooby is " + this.currenthobby!!.title)
+                    intent.type = "text/plain"
+                    context.startActivity(Intent.createChooser(intent, "Share to:"))
+                }
             }
         }
 
         fun setdata(hobby: Hobby?, pos: Int) {
-            itemView.txvTitle.text = hobby!!.title
-            this.currenthobby = hobby
-            this.ccurrentposition = pos
+            hobby?.let {
+                itemView.txvTitle.text = hobby.title
+                this.currenthobby = hobby
+                this.ccurrentposition = pos
+            }
         }
     }
 
